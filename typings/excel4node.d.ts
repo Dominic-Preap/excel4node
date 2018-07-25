@@ -10,9 +10,10 @@ declare module 'excel4node' {
      */
     addDataValidation(opt: WorksheetValidation);
     /**
-     * TODO:
+     * Conditional formatting adds custom formats in response to cell reference state. A subset of conditional formatting features is currently supported by excel4node.
+     * Formatting rules apply at the worksheet level.
      */
-    addConditionalFormattingRule();
+    addConditionalFormattingRule(ref: string, opt: AddConditionalFormattingRuleOptions);
 
     column(number: number): Column;
 
@@ -26,9 +27,9 @@ declare module 'excel4node' {
     cell(startRow: number, startColumn: number, endRow: number, endColumn: number, isMerged: number): Cell;
 
     /**
-     * TODO:
+     * Adds and image to the worksheet.
      */
-    addImage();
+    addImage(opt: AddImageOptions);
   }
   /**
    * An instance of the Workbook class contains all data and parameters for the Excel Workbook.
@@ -516,6 +517,42 @@ declare module 'excel4node' {
      * Minimum count 1, maximum count 2.
      */
     formulas?: any[];
+  }
+
+  interface AddConditionalFormattingRuleOptions {
+    type?: string;
+    priority?: number;
+    formula?: string;
+    style?: Style;
+  }
+
+  interface AddImageOptions {
+    image?: Buffer;
+    name?: string;
+    path?: string;
+    type?: string | 'picture';
+    /**
+     * absoluteAnchor takes two position elements in either EMUs or measurements in cm, mm, or in
+     * x:0, y:0 is top left corner of worksheet.
+     * oneCellAnchor and twoCellAnchor types will take positional objects
+     */
+    position?: {
+      type: 'absoluteAnchor' | 'oneCellAnchor' | 'twoCellAnchor';
+      x?: number | string;
+      y?: number | string;
+      from?: {
+        col?: number | string;
+        colOff?: number | string;
+        row?: number | string;
+        rowOff?: number | string;
+      };
+      to?: {
+        col?: number | string;
+        colOff?: number | string;
+        row?: number | string;
+        rowOff?: number | string;
+      };
+    };
   }
   //#endregion
 
