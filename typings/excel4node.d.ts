@@ -24,7 +24,7 @@ declare module 'excel4node' {
      */
     cell(startRow: number, startColumn: number): Cell;
     cell(startRow: number, startColumn: number, endRow: number, endColumn: number): Cell;
-    cell(startRow: number, startColumn: number, endRow: number, endColumn: number, isMerged: number): Cell;
+    cell(startRow: number, startColumn: number, endRow: number, endColumn: number, isMerged: boolean): Cell;
 
     /**
      * Adds and image to the worksheet.
