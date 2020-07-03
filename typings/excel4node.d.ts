@@ -182,6 +182,12 @@ declare module 'excel4node' {
      * @default 0
      */
     logLevel?: 0;
+    
+    /**
+     * Name for use in features such as comments
+     * @default 'Microsoft Office User'
+     */
+    author?: string;
   }
 
   // ==================================
