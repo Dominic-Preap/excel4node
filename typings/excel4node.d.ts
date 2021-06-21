@@ -8,12 +8,12 @@ declare module 'excel4node' {
     /**
      * Accepts a validation options object with these available options. All options are optional with exception of sqref.
      */
-    addDataValidation(opt: WorksheetValidation);
+    addDataValidation(opt: WorksheetValidation): void;
     /**
      * Conditional formatting adds custom formats in response to cell reference state. A subset of conditional formatting features is currently supported by excel4node.
      * Formatting rules apply at the worksheet level.
      */
-    addConditionalFormattingRule(ref: string, opt: AddConditionalFormattingRuleOptions);
+    addConditionalFormattingRule(ref: string, opt: AddConditionalFormattingRuleOptions): void;
 
     column(number: number): Column;
 
@@ -29,7 +29,7 @@ declare module 'excel4node' {
     /**
      * Adds and image to the worksheet.
      */
-    addImage(opt: AddImageOptions);
+    addImage(opt: AddImageOptions): void;
   }
   /**
    * An instance of the Workbook class contains all data and parameters for the Excel Workbook.
@@ -73,7 +73,7 @@ declare module 'excel4node' {
   /**
    * Accepts column as integer and returns corresponding column reference as alpha. (i.e. returns 'J')
    */
-  export function getExcelAlpha(column: number);
+  export function getExcelAlpha(column: number): string;
 
   /**
    * Accepts row and column as integers and returns Excel cell reference. (i.e. returns 'C5')
@@ -83,7 +83,7 @@ declare module 'excel4node' {
   /**
    * Accepts Date object and returns an Excel timestamp. (i.e. Returns 42004.791666666664)
    */
-  export function getExcelTS(date: Date);
+  export function getExcelTS(date: Date): number;
 
   interface WorkbookOption {
     jszip?: {
