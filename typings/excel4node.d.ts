@@ -8,12 +8,12 @@ declare module 'excel4node' {
     /**
      * Accepts a validation options object with these available options. All options are optional with exception of sqref.
      */
-    addDataValidation(opt: WorksheetValidation): any;
+    addDataValidation(opt: WorksheetValidation): void;
     /**
      * Conditional formatting adds custom formats in response to cell reference state. A subset of conditional formatting features is currently supported by excel4node.
      * Formatting rules apply at the worksheet level.
      */
-    addConditionalFormattingRule(ref: string, opt: AddConditionalFormattingRuleOptions): any;
+    addConditionalFormattingRule(ref: string, opt: AddConditionalFormattingRuleOptions): void;
 
     column(number: number): Column;
 
@@ -29,7 +29,7 @@ declare module 'excel4node' {
     /**
      * Adds and image to the worksheet.
      */
-    addImage(opt: AddImageOptions): any;
+    addImage(opt: AddImageOptions): void;
   }
   /**
    * An instance of the Workbook class contains all data and parameters for the Excel Workbook.
