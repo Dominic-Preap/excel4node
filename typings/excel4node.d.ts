@@ -1,4 +1,4 @@
-declare module 'excel4node' {
+declare namespace excel4node {
   import { Stats } from 'fs';
 
   /**
@@ -502,23 +502,23 @@ declare module 'excel4node' {
     /**
      * Message text of input prompt
      */
-    prompt?: String;
+    prompt?: string;
     /**
      * Title of input prompt
      */
-    promptTitle?: String;
+    promptTitle?: string;
     /**
      * Defaults to true if prompt or promptTitle is set
      */
-    showInputMessage?: Boolean;
+    showInputMessage?: boolean;
     /**
      * A boolean value indicating whether to display a dropdown combo box for a list type data validation. Defaults to true for type:list
      */
-    showDropDown?: Boolean;
+    showDropDown?: boolean;
     /**
      * One of 'none', 'whole', 'decimal', 'list', 'date', 'time', 'textLength', 'custom'
      */
-    type?: String;
+    type?: string;
     /**
      * Minimum count 1, maximum count 2.
      */
@@ -751,3 +751,5 @@ declare module 'excel4node' {
   }
   //#endregion
 }
+
+export = excel4node
