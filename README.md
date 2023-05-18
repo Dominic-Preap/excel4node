@@ -1,18 +1,48 @@
-# Use cases:
-## Use case 1: 
-After npm i excel4node in your typescript project, find a good location inside your project files. I used src/utils/modules
-```bash
-touch excel4node.js
+# excel4node
+
+> ⚠️ If you come across any missing features or typing errors, please create PR and I will review it. Or maybe convince the author to officially include typing. Thank you.
+
+A Typescript interface for [excel4node](https://github.com/advisr-io/excel4node).
+
+## Usage
+
+```sh
+npm i excel4node
+yarn add excel4node
 ```
-```javascript
-// eslint-disable-next-line @typescript-eslint/no-var-requires
-const xl = require('excel4node');
-module.exports = xl;
+
+After installing the library in your project, create a new typing file generally at the root of the project. Copy everything [inside](https://github.com/Dominic-Preap/excel4node/blob/master/typings/excel4node.d.ts) and paste to your file.
+
+```sh
+touch typings/excel4node.d.ts
 ```
-After this, download the only file of this repository or copy paste it in: src/utils/modules
+
+```sh
+•
+├── 📁src                  # Your main source code
+├── 📁typings              # Typings folder here
+│   └── 📄excel4node.d.ts  # Create typing file here
+├── 📄tsconfig.json        # Assuming you have a typescript project
+```
+
+If you have a Typescript project, you need to update your config in `tsconfig.json` by adding a glob pattern.
+
+```json
+{
+  "compilerOptions": {},
+  "include": ["src/**/*", "typings/**/*.ts"] // <-- Including glob pattern here
+}
+```
+
+Now you can use `excel4node` with typescript
 
 ```typescript
-import {Workbook, Style, Worksheet} from '../../utils/modules/excel4node.js'
-```
+import { Workbook, Style, Worksheet } from "excel4node";
 
-Now you can use excel4node with typescript
+// Create a new instance of a Workbook class
+const wb = new Workbook();
+
+// Add Worksheets to the workbook
+wb.addWorksheet('Sheet 1');
+wb.write('file.xlsx');
+```
