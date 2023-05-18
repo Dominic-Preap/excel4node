@@ -181,7 +181,7 @@ declare module 'excel4node' {
      * 0 - 5. 0 suppresses all logs, 1 shows errors only, 5 is for debugging
      * @default 0
      */
-    logLevel?: 0;
+    logLevel?: 0 | 1 | 5;
     
     /**
      * Name for use in features such as comments
