@@ -1,4 +1,4 @@
-declare namespace excel4node {
+declare module 'excel4node' {
   import { Stats } from 'fs';
 
   /**
