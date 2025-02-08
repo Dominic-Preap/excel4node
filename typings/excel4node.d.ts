@@ -78,7 +78,7 @@ declare module 'excel4node' {
   /**
    * Accepts row and column as integers and returns Excel cell reference. (i.e. returns 'C5')
    */
-  export function getExcelCellRef(row: number, column: number): { row: number; column: number };
+  export function getExcelCellRef(row: number, column: number): string;
 
   /**
    * Accepts Date object and returns an Excel timestamp. (i.e. Returns 42004.791666666664)
@@ -182,7 +182,7 @@ declare module 'excel4node' {
      * @default 0
      */
     logLevel?: 0 | 1 | 5;
-    
+
     /**
      * Name for use in features such as comments
      * @default 'Microsoft Office User'
@@ -643,7 +643,7 @@ declare module 'excel4node' {
   /**
    * §18.18.3 ST_BorderStyle (Border Line Styles)
    */
-  type BorderStyle =  'none'| 'thin'| 'medium'| 'dashed'| 'dotted'| 'thick'| 'double'| 'hair'| 'mediumDashed'| 'dashDot'| 'mediumDashDot'| 'dashDotDot'| 'mediumDashDotDot'| 'slantDashDot';
+  type BorderStyle = 'none' | 'thin' | 'medium' | 'dashed' | 'dotted' | 'thick' | 'double' | 'hair' | 'mediumDashed' | 'dashDot' | 'mediumDashDot' | 'dashDotDot' | 'mediumDashDotDot' | 'slantDashDot';
 
   interface Style {
     /**
