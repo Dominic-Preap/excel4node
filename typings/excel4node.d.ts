@@ -1,7 +1,7 @@
 declare module 'excel4node' {
-import { Stats } from 'fs';
+  import { Stats } from 'fs';
 
-    /**
+  /**
    * An instance of the Worksheet class contains all information specific to that worksheet
    */
   class Worksheet {
@@ -476,29 +476,29 @@ import { Stats } from 'fs';
      * Restricts input to a specific set of characters. One of 'noControl', 'off', 'on', 'disabled', 'hiragana', 'fullKatakana', 'halfKatakana', 'fullAlpha', 'halfAlpha', 'fullHangul', 'halfHangul'
      */
     imeMode?:
-    | 'noControl'
-    | 'off'
-    | 'on'
-    | 'disabled'
-    | 'hiragana'
-    | 'fullKatakana'
-    | 'halfKatakana'
-    | 'fullAlpha'
-    | 'halfAlpha'
-    | 'fullHangul'
-    | 'halfHangul';
+      | 'noControl'
+      | 'off'
+      | 'on'
+      | 'disabled'
+      | 'hiragana'
+      | 'fullKatakana'
+      | 'halfKatakana'
+      | 'fullAlpha'
+      | 'halfAlpha'
+      | 'fullHangul'
+      | 'halfHangul';
     /**
      * Must be one of 'between', 'notBetween', 'equal', 'notEqual', 'lessThan', 'lessThanOrEqual', 'greaterThan', 'greaterThanOrEqual'
      */
     operator?:
-    | 'between'
-    | 'notBetween'
-    | 'equal'
-    | 'notEqual'
-    | 'lessThan'
-    | 'lessThanOrEqual'
-    | 'greaterThan'
-    | 'greaterThanOrEqual';
+      | 'between'
+      | 'notBetween'
+      | 'equal'
+      | 'notEqual'
+      | 'lessThan'
+      | 'lessThanOrEqual'
+      | 'greaterThan'
+      | 'greaterThanOrEqual';
     /**
      * Message text of input prompt
      */
